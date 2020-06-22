@@ -1,4 +1,4 @@
-Crea un directorio, el nombre de este con la siguiente estructura:
+Crea un directorio, el nombre debe tener la siguiente estructura:
 
 nombre_apellidoPaterno_appelidoMaterno
 
