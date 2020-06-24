@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset= "UTF-8">
+    <meta name= "viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera página JS</title>
+  </head>
+  <body>
+    <button id="btnFor">For</button> 
+    <button id="btnWhile">While</button>
+  </body>
+
+  <script>
+    let i = 1;
+    btnWhile = document.getElementById('btnWhile');
+    btnWhile.addEventListener("click", function whileExample(){
+        while (i <= 10) {
+          console.log(i);
+          i++;
+        }
+      }
+    );
+    btnFor = document.getElementById('btnFor');
+    btnFor.addEventListener("click", function forExample(){
+        for (i=0; i < 10; i++) {
+          console.log(i);
+        }
+      }
+    );
+  </script>
+
+</html>
