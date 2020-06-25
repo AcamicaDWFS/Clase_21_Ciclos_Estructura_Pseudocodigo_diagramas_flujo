@@ -1,7 +1,7 @@
 let mayoresDeEdad = 0;
 let counter = 0;
 
-function ages(mayoresDedad) {
+function ages() {
     let age = prompt("Ingresa una edad");
     let ageNumber = parseInt(age);
 
@@ -13,7 +13,11 @@ function ages(mayoresDedad) {
         } else if (ageNumber != 0) {
             ages();
         } else if (ageNumber == 0) {
-            alert("De las " + counter + " edades ingresadas, " + mayoresDeEdad + " son mayores de edad.");
+            if (counter > 1) {
+                alert("De las " + counter + " edades ingresadas, " + mayoresDeEdad + " son mayores de edad.");
+            } else if (mayoresDeEdad == 0) {
+                alert("La persona ingresada es menor de edad");
+            }
             counter = 0;
             mayoresDeEdad = 0;
         }
