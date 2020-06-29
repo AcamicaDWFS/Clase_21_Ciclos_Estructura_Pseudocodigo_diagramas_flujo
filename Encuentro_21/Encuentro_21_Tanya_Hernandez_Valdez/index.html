@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma</title>
+</head>
+<body>
+    <script>
+        var x=1;
+        var suma=0;
+        var promedio;
+        var valor;
+        
+        do{
+          x=x+1;
+          valor=prompt('Ingrese un valor:','');
+          valor=parseInt(valor);
+          //En caso de que el usuario ingrese string
+          if (isNaN(valor)) {
+            alert("Ingrese solo valores númericos");
+          //En caso de que el usuario ingrese valores negativos
+          }else if(valor < 0){
+            alert("Ingrese unicamente valores positivos");
+          }
+
+          suma=suma+valor;
+          promedio = suma / 5;
+          promedio = parseFloat(promedio);
+
+        }
+        while (x<=5);
+        alert('La suma de los valores es ' + suma);
+        alert('El promedio de los valores es ' + promedio);
+      </script> 
+    
+</body>
+</html>
