@@ -1,6 +1,6 @@
-function isanumber (orden_num) {
+function getUserInput (ordenNum) {
     do {
-        input_user = parseFloat(prompt("Ingresa el " + orden_num + " número"));
+        input_user = parseFloat(prompt("Ingresa el " + ordenNum + " número"));
     }
     while (isNaN(input_user));   
 
@@ -10,16 +10,18 @@ function isanumber (orden_num) {
 let numbers = [];
 alert("Programa para sumar cinco números");
 
-/* numbers[0] = isanumber("primer");
-numbers[1] = isanumber("segundo");
-numbers[2] = isanumber("tercer");
-numbers[3] = isanumber("cuarto");
-numbers[4] = isanumber("quinto"); */
+/* numbers[0] = getUserInput("primer");
+numbers[1] = getUserInput("segundo");
+numbers[2] = getUserInput("tercer");
+numbers[3] = getUserInput("cuarto");
+numbers[4] = getUserInput("quinto"); */
 
-const msj_user = ["primer", "segundo", "tercer", "cuarto", "quinto"]; 
+const msjUser = ["primer", "segundo", "tercer", "cuarto", "quinto"]; 
 
-for (i = 0; i < 5; i++) {
-    numbers[i] = isanumber(msj_user[i]);
+const lengthMsjUser = msjUser.length;
+
+for (let index = 0; index < lengthMsjUser; index+= 1) {
+    numbers[index] = getUserInput(msjUser[index]);
 }
 console.log(numbers);
 
@@ -27,7 +29,7 @@ console.log(numbers);
 alert("La suma de estos números es: " + result); */
 
 let result = 0;
-for (i = 0; i < numbers.length; i++) { //El for nos sirve para manejar los índices(posiciones) del arreglo, no con los valores
-    result += numbers[i]; // result = result + numbers[i];     
+for (let index = 0; index < numbers.length; index+= 1) { //El for nos sirve para manejar los índices(posiciones) del arreglo, no con los valores
+    result += numbers[index]; // result = result + numbers[i];     
 }
 alert("La suma de estos números es: " + result);
